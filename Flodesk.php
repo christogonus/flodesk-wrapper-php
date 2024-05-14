@@ -8,10 +8,10 @@ class Flodesk {
     protected $method = "POST";
     protected $userAgent = "";
 
-    public function __construct($apikey) {
+    public function __construct($apikey, $baseUrl = "https://api.flodesk.com/v1", $userAgent = "ThrivingSmart (www.thrivingsmart.com)") {
         $this->apikey = $apikey;
-        $this->baseUrl = "https://api.flodesk.com/v1";
-        $this->userAgent = "ThrivingSmart (www.thrivingsmart.com)";
+        $this->baseUrl = $baseUrl;
+        $this->userAgent = $userAgent;
     }
 
     public function create($email, $fname = '', $lname = '') {
